@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập JS Buổi 4</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main__header">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-bai1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Bài tập 1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-bai2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Bài tập 2</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-bai3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Bài tập 3</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-bai4" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Bài tập 4</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="main__content">
+                <div class="tab-content container" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-bai1" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="main__title">
+                            <h5>
+                                <i class="fa-solid fa-arrow-down-1-9"></i>
+                                Sắp xếp số theo thứ tự tăng dần
+                            </h5>
+                        </div>
+                        <div class="main__body">
+                            <div class="main__nhapso">
+                                <input id="soThuNhat" type="number" placeholder="Nhập số thứ nhất">
+                                <input id="soThuHai" type="number" placeholder="Nhập số thứ hai">
+                                <input id="soThuBa" type="number" placeholder="Nhập số thứ ba">
+                            </div>
+                            <div class="main__button">
+                                <button id="btnSapXep" class="btn">
+                                    Sắp Xếp
+                                </button>
+                            </div>
+                            <div class="main__ketqua">
+                                <i class="fa-solid fa-arrow-turn-up"></i>
+                                <input class="form-control" type="text" readonly>
+                                <p id="showSapXep"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-bai2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="main__title">
+                            <h5>
+                                <i class="fa-solid fa-hand-peace"></i>
+                                Chào hỏi thành viên trong gia đình
+                            </h5>
+                        </div>
+                        <div class="main__body">
+                            <div class="main__nhapso">
+                                <select id="chonThanhVien" class="main__thanhvien">
+                                    <option class="thanhvien" value="thanhVien">--Chọn Thành Viên--</option>
+                                    <option value="bo">Bố</option>
+                                    <option value="me">Mẹ</option>
+                                    <option value="anhTrai">Anh Trai</option>
+                                    <option value="emGai">Em Gái</option>
+                                </select>
+                            </div>
+                            <div class="main__button">
+                                <button id="btnChao" class="btn">
+                                    Chào Hỏi
+                                </button>
+                            </div>
+                            <div class="main__ketqua">
+                                <i class="fa-solid fa-arrow-turn-up"></i>
+                                <input class="form-control" type="text" readonly>
+                                <p id="showLoiChao"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-bai3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="main__title">
+                            <h5>
+                                <i class="fa-solid fa-dice"></i>
+                                Đếm số chẵn và lẻ
+                            </h5>
+                        </div>
+                        <div class="main__body">
+                            <div class="main__nhapso">
+                                <input id="number1" type="number" placeholder="Nhập số bất kỳ">
+                                <input id="number2" type="number" placeholder="Nhập số bất kỳ">
+                                <input id="number3" type="number" placeholder="Nhập số bất kỳ">
+                            </div>
+                            <div class="main__button">
+                                <button id="btnTinhChanLe" class="btn">
+                                    Đếm Chẳn Lẻ
+                                </button>
+                            </div>
+                            <div class="main__ketqua">
+                                <i class="fa-solid fa-arrow-turn-up"></i>
+                                <input class="form-control" type="text" readonly>
+                                <p id="showChanLe"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-bai4" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="main__title">
+                            <h5>
+                                <i class="fa-solid fa-shapes"></i>
+                                Dự Đoán Tam Giác
+                            </h5>
+                        </div>
+                        <div class="main__body">
+                            <div class="main__nhapso">
+                                <input id="canh1" type="number" placeholder="Nhập cạnh thứ nhất">
+                                <input id="canh2" type="number" placeholder="Nhập cạnh thứ hai">
+                                <input id="canh3" type="number" placeholder="Nhập cạnh thứ ba">
+                            </div>
+                            <div class="main__button">
+                                <button id="btnTinh" class="btn">
+                                    Đoán xem
+                                </button>
+                            </div>
+                            <div class="main__ketqua">
+                                <i class="fa-solid fa-arrow-turn-up"></i>
+                                <input class="form-control" type="text" readonly>
+                                <p id="showTamGiac"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./baitap1.js"></script>
+    <script src="./baitap2.js"></script>
+    <script src="./baitap3.js"></script>
+    <script src="./baitap4.js"></script>
+    <!-- JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
