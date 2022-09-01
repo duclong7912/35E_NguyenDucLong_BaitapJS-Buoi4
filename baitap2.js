@@ -1,29 +1,27 @@
 //                     //  Chào hỏi thành viên trong gia đình
 
-// document.getElementById("btnChao").onclick = function() {
-
-//     // Đầu vào:
-//     var chonThanhVien = document.getElementById("chonThanhVien").value;
-    
-//     var xinChao = "";
-
-//     // Xử lý:
-
-//     if(chonThanhVien === 'bo'){
-//         xinChao = "Chào Bố !"
-//     } else if (chonThanhVien === 'me') {
-//         xinChao = "Chào Mẹ !"
-//     } else if (chonThanhVien === 'anhTrai') {
-//         xinChao = "Chào Anh Trai !"
-//     } else if (chonThanhVien === 'emGai') {
-//         xinChao = "Chào Em Gái !"
-//     }
-
-//     // Đầu ra:
-    
-//     document.getElementById("showLoiChao").innerHTML = xinChao;
-
-// }
+/**
+ * - Đầu vào:
+ * 
+ * Đặt biến để người dùng nhập dữ liệu
+ * 
+ * var hi = ?
+ * 
+ * đặt biến để hiện thị kết quả
+ * var xinChao = "";
+ * 
+ * - Xử lý:
+ * 
+ * Sử dụng switch case để xét từng trường hợp
+ * case "bo"
+ * case "me"
+ * case "anhTrai"
+ * case "emGai"
+ * 
+ * - Đầu ra:
+ * 
+ * xinChao = ?
+ */
 
 document.getElementById("btnChao").onclick = function () {
     

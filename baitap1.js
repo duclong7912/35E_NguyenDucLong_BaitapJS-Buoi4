@@ -1,5 +1,35 @@
                     //  Sắp xếp số theo thứ tự tăng dần
 
+/**
+ * - Đầu vào:
+ * 
+ * cho người dùng nhập dữ liệu
+ * var a = ?
+ * var b = ?
+ * var c = ?
+ * 
+ * đặt biến để hiển thị kết quả
+ * var sapXep = "";
+ * 
+ * - Xử lý:
+ *  
+ * Sử dụng if else để xét các trường hợp có thể xảy ra
+ * 
+ * a > b && a > c && b > c
+ * a > b && c > b && a > c
+ * a > b && c > a
+ * b > a && b > c && a > c
+ * b > c && c > a
+ * a == b && a > c && b > c
+ * b == c && a > c && a > b
+ * a == c && b > a && b > c
+ * a + ' < ' + b + ' < ' + c;
+ * 
+ * - Đầu ra:
+ * 
+ * sapXep = ?
+ */
+
 document.getElementById("btnSapXep").onclick = function () {
 
 // Đầu vào:
